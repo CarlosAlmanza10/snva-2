@@ -7,7 +7,7 @@ class Course(models.Model):
     name = fields.Char(string="Title", required= True)
     active = fields.Boolean(string="Active", default=True)
 
-    description = fields.Text()
+    description = fields.Text(string='Description')
     level = fields.Selection(string="Level",
                              selection=[
                                  ('beginner','Beginner'),
@@ -15,3 +15,4 @@ class Course(models.Model):
                                   ('advanced','Advanced'),
                              ],
                              copy=False)
+    sesion_ids = fields.One2many(comodel_name='academy.session', string='Sessions', inverse_name='course_id')

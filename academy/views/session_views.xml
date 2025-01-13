@@ -13,6 +13,8 @@
               <group>
                  <group>
                    <separator string="Session Data" />
+                   <field name="course_id" />
+                   <field name="instructor_id" />
                  </group> 
                  <group>
                    <separator string="Other Fields" />
@@ -29,7 +31,11 @@
     <field name="arch" type="xml">
         <list string="Session List">
             <field name="name" />
-            <field name="session_number" />           
+            <field name="session_number" /> 
+            <field name="course_id" />
+            <field name="instructor_id" />
+            <field name="date_start" />
+            <field name="date_end" />
         </list>
     </field>
   </record> 
@@ -39,7 +45,15 @@
     <field name="arch" type="xml">
         <search>
             <field name="name" />
-            <field name="session_number" />                      
+            <field name="session_number" /> 
+            <field name="date_start" />
+            <field name="course_id" />
+            <field name="instructor_id" />
+            <filter string="Start Date" name="start_date" date="date_start" />
+            <searchpanel>
+              <field name="course_id" select="multi" enable_counters="1"/>
+              <field name="instructor_id"/>  
+            </searchpanel>
         </search>
     </field>
   </record> 
