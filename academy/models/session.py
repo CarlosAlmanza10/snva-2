@@ -11,7 +11,7 @@ class Session(models.Model):
                                 default="S0000", copy=False, required=True, readonly=True)
     date_start = fields.Datetime(string='Start Date', required=True)
 
-    date_end = fields.Datetiem(string='End Date', required=True)
+    date_end = fields.Datetime(string='End Date', required=True)
 
     course_id = fields.Many2one(comodel_name="academy.course", string="Course", ondelete='cascade', required=True)
     instructor_id = fields.Many2one(comodel_name="res.course", string="Instructor", ondelete='restrict')
