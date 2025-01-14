@@ -8,7 +8,7 @@
         <form string="Session View">
            <header></header>
            <sheet>
-              <h1><field name="name"  /></h1>   
+              <h1><field name="name" /></h1>   
               <h2><field name="session_number" /></h2>               
               <group>
                  <group>
