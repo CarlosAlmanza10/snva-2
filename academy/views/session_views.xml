@@ -8,7 +8,6 @@
         <form string="Session View">
            <header></header>
            <sheet>
-              <label for="name">Titulo</label>
               <h1><field name="name"  /></h1>   
               <h2><field name="session_number" /></h2>               
               <group>
