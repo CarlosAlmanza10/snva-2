@@ -13,7 +13,8 @@
               <group>
                  <group>
                    <separator string="Session Data" />
-       
+                   <field name="course_id" />
+                   <field name="instructor_id" />
                  </group> 
                  <group>
                    <separator string="Other Fields" />

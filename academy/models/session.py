@@ -14,7 +14,7 @@ class Session(models.Model):
     date_end = fields.Datetime(string='End Date', required=True)
 
     course_id = fields.Many2one(comodel_name="academy.course", string="Course", ondelete='cascade', required=True)
-    instructor_id = fields.Many2one(comodel_name="res.course", string="Instructor", ondelete='restrict')
+    instructor_id = fields.Many2one(comodel_name="res.users", string="Instructor", ondelete='restrict')
     student_ids= fields.Many2many(comodel_name="res.partner", string="Students")
     
     @api.model_create_multi
