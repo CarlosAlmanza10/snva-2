@@ -15,6 +15,8 @@
                    <separator string="Session Data" />
                    <field name="course_id" />
                    <field name="instructor_id" />
+                   <field name="date_start" />
+                   <field name="date_end" />
                  </group> 
                  <group>
                    <separator string="Other Fields" />
