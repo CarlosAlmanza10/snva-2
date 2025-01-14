@@ -8,7 +8,7 @@
         <form string="Session View">
            <header></header>
            <sheet>
-              <label for="name">Titulo</label>
+              <label for="name" string="Titulo"/>
               <h1><field name="name" /></h1>   
               <h2><field name="session_number" /></h2>               
               <group>
@@ -16,6 +16,8 @@
                    <separator string="Session Data" />
                    <field name="course_id" />
                    <field name="instructor_id" />
+                   
+                   <label for="date_start" string="Fecha"/>
                    <div class="o_row">
                      <field name="date_start" widget="daterange" options="{'related_end_date': 'date_end'}" class="oe_label" nolabel="1" />
                      <field name="date_end" widget="daterange" options="{'related_start_date': 'date_start'}" class="oe_label" nolabel="1" />
