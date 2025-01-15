@@ -22,6 +22,7 @@
                      <field name="date_start" widget="daterange" options="{'related_end_date': 'date_end'}" class="oe_label" nolabel="1" />
                      <field name="date_end" widget="daterange" options="{'related_start_date': 'date_start'}" class="oe_label" nolabel="1" />
                    </div> 
+                    <field name="duration" />
                  </group> 
                  <group>
                    <separator string="Other Fields" />
@@ -48,6 +49,7 @@
             <field name="instructor_id" />
             <field name="date_start" />
             <field name="date_end" />
+            <field name="duration" />
         </list>
     </field>
   </record> 

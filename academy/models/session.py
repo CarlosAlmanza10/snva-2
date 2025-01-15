@@ -1,5 +1,6 @@
 from odoo import api, fields, models
 from odoo.exceptions import ValidationError
+from odoo.tools import date_utils
 
 class Session(models.Model):
     _name =  'academy.session'
@@ -12,6 +13,7 @@ class Session(models.Model):
     date_start = fields.Datetime(string='Start Date', required=True)
 
     date_end = fields.Datetime(string='End Date', required=True)
+    duration = fields.Integer(string="Duracion", _compute="_compute_session_duration", inverse=" _inverse_session_duration", readonly=False )
 
     course_id = fields.Many2one(comodel_name="academy.course", string="Course", ondelete='cascade', required=True)
     instructor_id = fields.Many2one(comodel_name="res.users", string="Instructor", ondelete='restrict')
@@ -30,4 +32,18 @@ class Session(models.Model):
         for session in self:
             if(session.date_start > session.date_end):
                 raise ValidationError('La fecha final no puede ser menor a la inicial')
+    
+    @api.depends("date_start", "date_end")
+    def _compute_session_duration(self):
+        for record in self:
+            if record.date_start and record.date_end:
+                record.duration = (record.date_end - record.date_start).days +1
+
+    def _inverse_session_duration(self):
+        for record in self:
+            if record.date_start and record.duration:
+                record.date_end = date_utils.add(record.date_start, days=record.duration -1)
+
+
+
         
