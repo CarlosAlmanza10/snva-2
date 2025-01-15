@@ -27,6 +27,11 @@
                    <separator string="Other Fields" />
                  </group> 
               </group>
+              <notebook>
+                <page string="Descripcion">
+                   <field name="description"/>
+                </page>
+              </notebook>
             </sheet>
         </form>
     </field>
