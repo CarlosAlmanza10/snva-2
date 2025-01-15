@@ -8,7 +8,7 @@
         <form string="Course View">
            <header></header>
            <sheet>
-              <h1><field name="name" /></h1>               
+              <h1><field name="name" /></h1>                
               <group>
                  <group>
                    <separator string="Course Settings" />
