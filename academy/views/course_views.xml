@@ -41,7 +41,7 @@
             <field name="description" />
             <field name="base_price" />  
             <field name="additional_fee" />  
-            <field name="total_priece" />  
+            <field name="total_price" />  
             <field name="create_date" optional="hide" />
            
         </list>
