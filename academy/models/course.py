@@ -16,7 +16,7 @@ class Course(models.Model):
                              ],
                              copy=False)
     sesion_ids = fields.One2many(comodel_name='academy.session', string='Sessions', inverse_name='course_id')
-    currency_id = fields.Many2One(comodel_name="res.currency", string="Precio", default= lambda self:self.env.company.currency_id.id)
+    currency_id = fields.Many2one(comodel_name="res.currency", string="Precio", default= lambda self:self.env.company.currency_id.id)
     base_price = fields.Monetary(string="Precio base", currency_field= "currency_id")
     additional_fee = fields.Monetary(string="Fee Adicional", currency_field= "currency_id")
     total_price = fields.Monetary(string="Precio total", currency_field= "currency_id", compute="_compute_total_price")
