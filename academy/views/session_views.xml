@@ -66,7 +66,7 @@
             <filter string="Start Date" name="start_date" date="date_start" />
             <searchpanel>
               <field name="course_id" select="multi" enable_counters="1"/>
-              <field name="instructor_id"/>  
+              <field name="instructor_id" select="multi"/>  
             </searchpanel>
         </search>
     </field>
