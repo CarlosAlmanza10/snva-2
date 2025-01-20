@@ -58,7 +58,7 @@
     <field name="model">academy.session</field>
     <field name="arch" type="xml">
         <search>
-            <field name="name" />
+            <field name="name" /> 
             <field name="session_number" /> 
             <field name="date_start" />
             <field name="course_id" />
